@@ -5,10 +5,13 @@
 #Problem 1 Code:
 echo "Please enter a file name and then a regular expression."
 echo "Filename: "
-read filename
+read filename #These take in both the filename and regEx seperately and then simply uses grep with them
 echo "Regular Expression : "
 read regexpres
 grep $regexpres $filename
+#The below regEx were obtained with help from the internet and the first two count the lines
+#The third on is the same regEx as the first one but with only 303 numbers
+#The last one is the same regEx and the second one but only for geocities.com emails and it outputs into email_results
 echo "The number of phone numbers in regex_practice.txt is: "
 grep -c '[0-9]\{3\}[ -]\?[0-9]\{3\}[ -]\?[0-9]\{4\}' regex_practice.txt
 echo "The number of emails in regex_practice.txt is :"
